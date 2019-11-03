@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Caesar Cipher</title>
+  </head>
+  <body>
+    <div class="container-fluid pt-3 px-3 d-flex flex-column">
+      <h1>Caesar Cipher</h1>
+      <div class="flex-fill">
+        <p>
+          One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher. In a shift cipher, the letters are shifted by some set amount.
+        </p>
+        <p>
+          A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places, e.g. 'A' &rarr; 'N', 'B' &rarr; 'O', etc
+        </p>
+
+        <form class="form-inline">
+          <label for="shift" class="col-form-label mr-3">Enter a string to encode / decode</label>
+          <input type="text" id="shift" class="form-control mr-3" autofocus required>
+          <button class="btn btn-primary mt-3 mt-sm-0">Encode / Decode</button>
+        </form>
+
+        <div class="mt-3">
+          <button id="clear" class="btn btn-secondary mb-3">Clear History</button>
+          <ul id="result" class="list-unstyled"></ul>
+        </div>
+      </div>  <!-- End .flex-fill -->
+
+      <footer>
+        <p class="author">
+          Created for <a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/caesars-cipher" target="_blank">freeCodeCamp</a>
+        </p>
+      </footer>
+    </div>  <!-- End .container-fluid -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

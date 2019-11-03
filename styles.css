@@ -1,0 +1,15 @@
+body {
+  background: lavender;
+}
+
+.container-fluid {
+  min-height: 100vh;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 0.7rem;
+}

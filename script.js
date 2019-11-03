@@ -1,3 +1,16 @@
+$(function() {
+  $('form').on('submit', function(evt) {
+    evt.preventDefault();
+    rot13( $('input').val() );
+  });
+
+  $('#clear').on('click', function(evt) {
+    $('#result').empty();
+    $('input').focus();
+  });
+});
+
+
 function rot13(string) {
   let array = [];
 
@@ -6,7 +19,7 @@ function rot13(string) {
     array.push(string.charCodeAt(i));
   }
 
-  return array.map((code) => {
+  let shifted_string = array.map((code) => {
     // If uppercase letters: [A - Z] = [65 - 90]
     if (code >= 65 && code <= 90) {
       let charCode = code + 13;
@@ -30,4 +43,8 @@ function rot13(string) {
       return String.fromCharCode(code);
     }
   }).join('');
+
+  $('#result').append(`<li>${string} = ${shifted_string}</li>`);
+
+  $('input').val('');
 }
